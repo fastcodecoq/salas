@@ -1,0 +1,18 @@
+{
+  "directory": "libs",
+  "name" : "Salas",
+  "version" : "Beta v0.0.1",
+  "Author" : "@gomosoft",
+  "main" : "index.html",
+  "dependencies" : {
+    "angular-latest" : "latest",
+    "jquery" : "~1.7.1",
+    "less.js" : "latest",
+    "normalize.css" : "latest",
+    "animate.css" : "latest",
+    "select2" : "latest",
+    "bootstrap" : "latest",
+    "numeral" : "latest",
+    "select2" : "latest"
+   } 
+}
