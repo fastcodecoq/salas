@@ -13,9 +13,10 @@
    	echo json_encode(array("estado"=>0));
    else
    	{	
-   		setcookie("salas", $token, time() + (3600 * 2) , "/");
-		setcookie("sala", $id_sala. ":" .$cedula, time() + (3600 * 2) , "/");
-        setcookie("tiempo", $_COOKIE["tiempo"], time() + (3600 * 2) , "/");
+   		
+   		setcookie("salas", $_COOKIE["salas"], time() + (60 * 15) , "/");
+		setcookie("sala", $_COOKIE["sala"], time() + (60 * 15) , "/");
+        setcookie("tiempo", $_COOKIE["tiempo"], time() + (60 * 15) , "/");
 
    		echo json_encode(array("estado"=>1));
    	}

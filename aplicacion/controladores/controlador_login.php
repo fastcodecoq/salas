@@ -50,9 +50,9 @@ class controlador_login{
 				 if($row["id_sala"] === $id_sala AND $row["cedula"] === $cedula)
 				 	 {	
 				 	 	 $token = md5($cedula . microtime() . $_SERVER["REMOTE_ADDR"] . $cliente);
-				 	 	 setcookie("salas", $token, time() + (3600 * 2) , "/");
-				 	 	 setcookie("sala", $id_sala. ":" .$cedula, time() + (3600 * 2) , "/");
-				 	 	 setcookie("tiempo", time(), time() + (3600 * 2) , "/");
+				 	 	 setcookie("salas", $token, time() + (60 * 15) , "/");
+				 	 	 setcookie("sala", $id_sala. ":" .$cedula, time() + (60 * 15) , "/");
+				 	 	 setcookie("tiempo", time(), time() + (60 * 15) , "/");
 				 	 	 
 				 	 	 $_SESSION["salas"] = $token;
 

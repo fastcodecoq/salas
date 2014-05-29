@@ -10,10 +10,11 @@ var sala = function(app){
        salaFactory.infoSala().success(function(rs){
 
             
-            if(rs.nombre)
-             $scope.usuario = rs;  
+            if(rs.nombres)
+             $scope.usuario = rs; 
             else
-             $scope.salir();          
+             $scope.salir; 
+                  
 
          });
 
