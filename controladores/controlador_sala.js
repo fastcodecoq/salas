@@ -8,9 +8,12 @@ var sala = function(app){
 
 
        salaFactory.infoSala().success(function(rs){
+
             
-            if(rs)
-             $scope.usuario = rs;            
+            if(rs.nombre)
+             $scope.usuario = rs;  
+            else
+             $scope.salir();          
 
          });
 
