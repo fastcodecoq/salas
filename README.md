@@ -31,7 +31,7 @@ Esta apliación es una practica elaborada para probar el modelo de desarrollo qu
 
 2. Control de acceso de usuarios a determinadas salas a través del número de documento.
 
-3. Registro de las operaciones realizadas por cada usuario.
+3. Registro de las operaciones realizadas por cada usuario (Log: ingreso, salida, registro).
 
 4. Control de tiempo de permanencia dentro de una sala. 
 
