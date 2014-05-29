@@ -4,12 +4,35 @@ var router = function(app){
 
 	 	  var $router = $routeProvider;
 
+	 	  var auth = function($http){ 	 	  	
+                      
+                      $http.get("aplicacion/controladores/controlador_validar_sesion.php")
+                      .success(function(rs){
+                      	   if(rs.estado != 1)
+                      	   	window.location = "#/";
+                      });        
+
+	 	  		  }
+
+
+	 	  	var noLogued = function($http){ 
+
+	 	  			  console.log($http);
+                      
+                      $http.get("aplicacion/controladores/controlador_validar_sesion.php")
+                      .success(function(rs){
+                      	   if(rs.estado != 0)
+                      	   	window.location = "#/sala";
+                      });        
+
+	 	  		  }
 
 
 	 	  $router
 	 	  .when("/registro", { templateUrl : "vistas/registro.html" })	 	  
-	 	  .when("/sala", { templateUrl : "vistas/sala.html" })	 	  
-	 	  .when("/", { templateUrl : "vistas/login.html" , controller : "loginCtrl"});	 	  
+	 	  .when("/sala", { templateUrl : "vistas/sala.html", resolve : {auth : auth}})	 	  
+	 	  .when("/reportes", { templateUrl : "vistas/reportes.html", resolve : {auth : auth}})	 	  
+	 	  .when("/", { templateUrl : "vistas/login.html" , controller : "loginCtrl", resolve :  { noLogued : noLogued}});	 	  
 
 	 });
 

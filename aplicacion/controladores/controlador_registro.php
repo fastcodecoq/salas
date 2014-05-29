@@ -62,7 +62,10 @@ class controlador_registro{
 			if($rs === -1)
 			    echo json_encode(array("estado" => -1));							
 			else if($rs)			
-				echo json_encode(array("estado" => 1));							
+				{	
+					BITACORA::LOG($_POST["cedula"], "se registró en el sistema");
+					echo json_encode(array("estado" => 1));	
+				}
 			else
 				echo json_encode(array("estado" => 0));
 

@@ -51,6 +51,7 @@ class controlador_login{
 				 	 {	
 				 	 	 $token = md5($cedula . microtime() . $_SERVER["REMOTE_ADDR"] . $cliente);
 				 	 	 setcookie("salas", $token, time() + (3600 * 24 * 5) , "/");
+				 	 	 setcookie("tiempo", time(), time() + (3600 * 24 * 5) , "/");
 				 	 	 setcookie("sala", $id_sala. ":" .$cedula, time() + (3600 * 24 * 5) , "/");
 				 	 	 $_SESSION["salas"] = $token;
 

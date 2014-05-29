@@ -12,7 +12,7 @@ function infosala(){
 	$db = conectar();
 	$cedula = explode(":", $_COOKIE["sala"]);
 	$sala = $cedula[0];
-	$cedula = $cedula[1];
+	$cedula = (int) $cedula[1];
 
 	$query = "SELECT * FROM estudiantes WHERE cedula = {$cedula} LIMIT 1";	
 
@@ -23,10 +23,16 @@ function infosala(){
 
 		$usuario = $rs->fetch_assoc();
 
+		foreach ($usuario as $key => $value)
+         	  $usuario[$key] = utf8_encode($value);
+
 		$query = "SELECT * FROM salas WHERE id = {$sala} LIMIT 1";
 		$rs = $db->query($query);
 
 		$usuario["sala"] = $rs->fetch_assoc();
+
+		foreach ($usuario["sala"] as $key => $value)
+         	  $usuario["sala"][$key] = utf8_encode($value);
 
 		BITACORA::LOG($cedula, "observó su pagina principal de sala");
 

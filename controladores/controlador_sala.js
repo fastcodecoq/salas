@@ -7,17 +7,6 @@ var sala = function(app){
 	   
 
 
-
-
-	     salaFactory.auth().success( function(rs){
-
-	     	   if(rs.estado != 1)
-            window.location = "#/";
-
-	     });
-
-
-
        salaFactory.infoSala().success(function(rs){
             
             if(rs)
@@ -31,6 +20,16 @@ var sala = function(app){
             $http.get("aplicacion/controladores/controlador_salir.php").success(function(rs){
 
                 if(!rs)return;
+
+                rs.tiempo = parseInt(rs.tiempo);
+
+                if(rs.tiempo < 60)
+                 alert("Tiempo de sesión: " + numeral(rs.tiempo).format("0,00") + " segs.");
+                else if(rs.tiempo > 60 && rs.tiempo < 3600)
+                 alert("Tiempo de sesión: " + numeral(rs.tiempo/60).format("0,00") + " mins.");
+               else
+                 alert("Tiempo de sesión: " + numeral(rs.tiempo/3600).format("0,00") + " hrs.");
+
 
                  if(rs.estado === 1)
                    window.location = "#/";
@@ -48,12 +47,7 @@ var sala = function(app){
    app.factory("salaFactory", function($http){
    
    var factory = {};
-   
-   factory.auth = function(){
-
-        return $http.get("aplicacion/controladores/controlador_validar_sesion.php");
-     
-     };   
+    
 
 
    factory.infoSala = function(){

@@ -23,6 +23,7 @@
 
       <script src="libs/angular/angular.js"></script>      
       <script src="libs/angular/angular-animate.min.js"></script>      
+      <script src="libs/numeral/numeral.min.js"></script>      
       <script src="controladores/controlador_salas.js"></script>
       <script src="controladores/controlador_login.js"></script>
       <script src="controladores/controlador_registro.js"></script>
@@ -33,6 +34,30 @@
 
 
       <script>
+
+              numeral.language('es', {
+              delimiters: {
+              thousands: '.',
+              decimal: '.'
+              },
+              abbreviations: {
+              thousand: 'k',
+              million: 'm',
+              billion: 'b',
+              trillion: 't'
+              },
+              ordinal : function (number) {
+              return number === 1 ? 'er' : 'ème';
+              },
+              currency: {
+              symbol: '$'
+              }
+              });
+              
+              numeral.language('es');
+
+
+
              var app = angular.module("salas", [])
              .run(function($rootScope) {
                 $rootScope.dpto = {};
@@ -43,6 +68,7 @@
              new registro(app);
              new sala(app);
              new router(app);
+             
       </script>
    </body>
 </html>

@@ -25,6 +25,10 @@ class modelo_salas{
 	 	 $rs = $this->db->query($query);
 	 	 $rss = array();
 	 	 while($fila = $rs->fetch_array(MYSQLI_ASSOC)) {
+	 	 	
+	 	    foreach ($fila as $key => $value)
+         	  $fila[$key] = utf8_encode($value);
+
             $rss[]=$fila;
            }
 
