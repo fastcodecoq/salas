@@ -6,7 +6,7 @@ App con sistema de registro y login, desarrollada con AngularJS, PHP y MySQL.
 
 
 Instalación
-===========
+-----------
 
 Para que el apliactivo funcione de forma correcta, se debe:
 
