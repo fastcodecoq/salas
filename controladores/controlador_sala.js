@@ -13,7 +13,7 @@ var sala = function(app){
             if(rs.nombres)
              $scope.usuario = rs; 
             else
-             $scope.salir; 
+             $scope.salir(); 
                   
 
          });
