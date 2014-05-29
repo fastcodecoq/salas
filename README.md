@@ -42,4 +42,4 @@ Las sala se refiere a un espacio reservado para un grupo de usuarios, este espac
 Proposito
 ---------
 
-La idea es promover el entendimiento de como funciona AngularJS, también como la podemos usar para construir aplicaciones MVC desde el frontend al backend. 
+La idea es promover el entendimiento de como funciona AngularJS, también como podemos usar este framework para construir aplicaciones MVC desde el frontend al backend. 
