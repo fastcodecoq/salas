@@ -1,0 +1,22 @@
+  
+<br>
+<br>
+      <form class="form-signin" ng-controller="loginCtrl"  ng-submit="login()">
+            <div class="row">
+         <img src="recursos/imagenes/logo.png" alt="" class="col-md-7 col-md-offset-2">
+      </div>
+      <br>
+        <h3 class="form-signin-heading text-center">Ingresar.</h3>
+        <small style="display:block" class="text-center">Use el formulario de abajo para ingresar al sistema.</small>
+        <br>
+        <input  class="form-control" ng-model="cedula" placeholder="Cedula" required="" autofocus="">
+        <select class="form-control" ng-model="sala" placeholder="Sala" required="" ng-controller="salasCtrl" >
+            <option value="{{sala.id}}" ng-repeat="sala in salas">{{sala.nombre}}</option>
+        </select>
+       <br>
+      <div class="rgt row col-md-offset-0">
+        <a class="btn btn-lg btn-success col-md-7 " href="#registro" >Registrarme Ahora</a>
+        <button class="btn btn-lg btn-primary col-md-4 pull-right" style="margin-right: 10px;" type="submit">Ingresar</button>        
+        </div>
+      </form>
+

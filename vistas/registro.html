@@ -1,0 +1,58 @@
+
+      <form class="form-signin" ng-controller="registroCtrl"  ng-submit="registro()">
+             <a href="#/" class="pull-left"><i class="glyphicon glyphicon-chevron-left" style="margin-left: -11px;"></i> Volver</a>
+             <br>
+             <br>
+          <div class="row">
+         <img src="recursos/imagenes/logo.png" alt="" class="col-md-7 col-md-offset-2">
+          </div>
+        <br>
+        <h3 class="text-center">Registro</h3>
+        <small style="display:block">Haga su registro completando el formulario de abajo.</small>
+         <br>
+        <div class="row ">
+
+              <input name="cedula" ng-model="cedula" placeholder="Ingrese su número de cédula" class="col-md-12">              
+              <input name="nombres" ng-model="nombres" placeholder="Ingrese sus Nombres" class="col-md-12">
+              <input name="apellidos" ng-model="apellidos" placeholder="Ingrese sus Apellidos" class="col-md-12">
+              
+              <label></label>
+
+              <div class="col-md-12 nopadding" ng-controller="geoCtrl" style="padding:10px 0 5px 0"> 
+
+              <label>Seleccione un departamento</label>
+              <select   ng-model="dpto" class="col-md-12" ng-disabled="!dptos"  ng-options="dpto.nombre for dpto in dptos"  >
+                    
+                <option value="{{dpto.id_departamento}}" ng-repeat="dpto in dptos">{{dpto.nombre}}</option>
+              </select>
+
+              <label>Seleccione una Ciudad</label>
+              <select ng-model="mcpio" class="col-md-12" ng-disabled="!mcpios" ng-controller="geoCtrl" ng-options="mcpioo.nombre for mcpioo in mcpios">
+  
+                <option value="{{mcpioo.id}}" ng-repeat="mcpioo in mcpios">{{mcpioo.nombre}}</option>
+              </select>
+
+               </div>
+
+              <label></label>
+
+              <input name="direccion" ng-model="direccion" placeholder="Ingrese su direccion" class="col-md-12">
+              <input name="telefono" ng-model="telefono" placeholder="Ingrese su número de telefono" class="col-md-12">
+
+              <select ng-model="sexo" class="col-md-12" ng-options="sexo.nombre for sexo in sexos">                         
+                <option value="{{sexo.id}}"  ng-repeat="sexo in sexos">{{sexo.nombre}}</option>
+              </select>
+                
+                <label>Seleccione una sala</label>
+              <select ng-model="sala" class="col-md-12"  ng-controller="salasCtrl" >  
+                <option value="{{sala.id}}" ng-repeat="sala in salas">{{sala.nombre}}</option>
+              </select>
+
+        </div>
+
+       <br>
+      <div class="rgt row ">
+        <button type="submit" class="btn btn-lg btn-success col-md-12 " >Registrarme Ahora</button>
+        </div>
+      </form>
+

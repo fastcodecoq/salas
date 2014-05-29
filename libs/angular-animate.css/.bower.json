@@ -1,0 +1,26 @@
+{
+  "name": "angular-animate",
+  "version": "1.0.1",
+  "main": [
+    "./angular-animate.css",
+    "./angular-animate.min.css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kevin-smets/angular-animate"
+  },
+  "dependencies": {
+    "animate.css": "latest",
+    "angular": "PatternConsulting/bower-angular"
+  },
+  "homepage": "https://github.com/kevin-smets/angular-animate.css",
+  "_release": "1.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.1",
+    "commit": "0495d03a5ef489db134b247e0dca52d9d4f297c8"
+  },
+  "_source": "git://github.com/kevin-smets/angular-animate.css.git",
+  "_target": "*",
+  "_originalSource": "angular-animate.css"
+}
