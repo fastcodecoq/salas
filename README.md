@@ -1,10 +1,15 @@
+![Gomosoft](http://gomosoft.com/assets/img/logo.jpg)
+
+*
+*
+
+
 Salas
 =====
 
 App con sistema de registro y login, desarrollada con AngularJS, PHP y MySQL.
 
 
-![Gomosoft](http://gomosoft.com/assets/img/logo.jpg)
 
 
 Instalación
