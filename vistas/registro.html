@@ -16,6 +16,10 @@
               <input name="nombres" ng-model="nombres" placeholder="Ingrese sus Nombres" class="col-md-12">
               <input name="apellidos" ng-model="apellidos" placeholder="Ingrese sus Apellidos" class="col-md-12">
               
+              <select ng-model="sexo" class="col-md-12" ng-options="sexo.nombre for sexo in sexos">                         
+                <option value="{{sexo.id}}"  ng-repeat="sexo in sexos">{{sexo.nombre}}</option>
+              </select>
+
               <label></label>
 
               <div class="col-md-12 nopadding" ng-controller="geoCtrl" style="padding:10px 0 5px 0"> 
@@ -35,13 +39,11 @@
                </div>
 
               <label></label>
-
+              <br>
+                <div class="col-md-12 nopadding" style="padding:10px 0 10px 0">
               <input name="direccion" ng-model="direccion" placeholder="Ingrese su direccion" class="col-md-12">
               <input name="telefono" ng-model="telefono" placeholder="Ingrese su número de telefono" class="col-md-12">
-
-              <select ng-model="sexo" class="col-md-12" ng-options="sexo.nombre for sexo in sexos">                         
-                <option value="{{sexo.id}}"  ng-repeat="sexo in sexos">{{sexo.nombre}}</option>
-              </select>
+</div>
                 
                 <label>Seleccione una sala</label>
               <select ng-model="sala" class="col-md-12"  ng-controller="salasCtrl" >  
