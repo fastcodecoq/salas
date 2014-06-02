@@ -17,7 +17,7 @@ var registro = function(app){
              console.log(data);
 
 
-             jQuery.ajax({ 
+             $.ajax({ 
                 url: "aplicacion/controladores/controlador_registro.php", 
                 data : data,
                 type : "POST",
