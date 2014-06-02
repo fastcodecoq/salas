@@ -14,9 +14,9 @@
    else
    	{	
    		
-   		setcookie("salas", $_COOKIE["salas"], time() + (60 * 15) , "/");
-		setcookie("sala", $_COOKIE["sala"], time() + (60 * 15) , "/");
-        setcookie("tiempo", $_COOKIE["tiempo"], time() + (60 * 15) , "/");
+   		setcookie("salas", $_COOKIE["salas"], time() + 3600 , "/");
+		setcookie("sala", $_COOKIE["sala"], time() + 3600 , "/");
+        setcookie("tiempo", $_COOKIE["tiempo"], time() + 3600 , "/");
 
    		echo json_encode(array("estado"=>1));
    	}

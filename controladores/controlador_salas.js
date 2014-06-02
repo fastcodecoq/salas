@@ -3,7 +3,7 @@ var salas = function(app){
   console.log("salasCtrl");
 		
 
-	app.controller("salasCtrl",function($scope, $rootScope, salasFactory){	
+	app.controller("salasCtrl",function($scope, salasFactory){	
 	 
 	     salasFactory.get().success( function(rs){
 
@@ -18,7 +18,6 @@ var salas = function(app){
 
           console.log($scope.sala);
 
-          $rootScope.sala = $scope.sala;
 
        });
 

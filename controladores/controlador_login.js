@@ -26,13 +26,10 @@ var login = function(app){
               
               console.log(rs);
 
-                 if(rs.estado === 1)
-                   {
+                 if(rs.estado === 1)                
                      window.location = "#/sala";
-                     window.location = "#/sala";
-                    }
                     else
-                      alert("El usuario ingresado o la sala seleccionada no son correctos, o no coinciden");
+                      alert("El usuario ingresado no es correcto, o no hace parte de la sala seleccionada.");
              },
              error : function(error){
                console.log(error);

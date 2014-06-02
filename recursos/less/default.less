@@ -58,3 +58,31 @@ form.form-signin input, form.form-signin select{
     }
 
 }
+
+
+.render{
+  -ms-word-break: break-all;
+     word-break: break-all;
+
+     /* Non standard for webkit */
+     word-break: break-word;
+
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+    -ms-hyphens: auto;
+        hyphens: auto;
+
+}
+
+
+// DIALOG STYLE
+
+#overr{position:fixed;left:0;top:0;width:100%; height:100%;display:none;z-index:100000000000000;transition:all .3s;}
+#confirmation .title span{font-size: 15px;margin-left: 3px;color: rgb(32, 148, 255);}
+#confirmation .title{display: block;padding: 7px 0 10px 0;border-bottom: 1px solid #ccc;margin-bottom:10px;width:100%;}
+#confirmation{z-index:100000;position:fixed;width:450px;max-height:400px;background:white;left:50%;margin-left:-255px;top:150px;box-shadow:0 5px 19px rgba(0,0,0,.5);border-radius:5px;overflow:hidden;overflow-y:auto}#confirmation *{font-family:"Lucida grande",Arial,sans-serif;font-size:13px; opacity:0.98}
+#confirmation .content{padding:7px;word-break:break-all; padding:12px 6px; overflow:auto; max-height:300px;font-size:14px; line-height:1.3;.render;}
+#confirmation .buttons{*zoom:1;display:block;border-top:1px solid #ccc}#confirmation .buttons span{display:block;float:left;float:right;border-right:1px solid #ccc;padding:10px 0;height:22px;cursor:pointer;width:49.8%;text-align:center;-webkit-touch-callout: none;
+-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;cursor:default;}#confirmation .buttons span:hover{background:#F7F7F7}
+#confirmation .buttons span:first-child{border:0}
+#confirmation.chocolate{background:#A71729;color:white}#confirmation.chocolate .buttons span:hover{background:#d41d34}

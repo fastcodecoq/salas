@@ -1,6 +1,6 @@
 var geo = function(app){
 		
-	app.controller("geoCtrl",function($scope, $rootScope, $http, geoFactory){	
+	app.controller("geoCtrl",function($scope, $http, geoFactory){	
 	   
 
 
@@ -17,8 +17,6 @@ var geo = function(app){
 
           }); 
 
-            $rootScope.dpto = $scope.dpto;
-
         }, true);
 
 
@@ -26,7 +24,6 @@ var geo = function(app){
 
            if(!nuevoValor) return;
 
-           $rootScope.mcpio = $scope.mcpio;
 
 
             });

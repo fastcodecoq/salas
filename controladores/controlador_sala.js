@@ -3,7 +3,7 @@ var sala = function(app){
   console.log("salaCtrl");
 		
    
-	app.controller("salaCtrl",function($scope, $rootScope, $http, salaFactory){	
+	app.controller("salaCtrl",function($scope, $http, salaFactory){	
 	   
 
 

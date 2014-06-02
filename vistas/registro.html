@@ -16,7 +16,7 @@
               <input name="nombres" ng-model="nombres" placeholder="Ingrese sus Nombres" class="col-md-12">
               <input name="apellidos" ng-model="apellidos" placeholder="Ingrese sus Apellidos" class="col-md-12">
               
-              <select ng-model="sexo" class="col-md-12" ng-options="sexo.nombre for sexo in sexos">                         
+              <select ng-model="sexo" name="sexo" class="col-md-12" >                         
                 <option value="{{sexo.id}}"  ng-repeat="sexo in sexos">{{sexo.nombre}}</option>
               </select>
 
@@ -25,13 +25,13 @@
               <div class="col-md-12 nopadding" ng-controller="geoCtrl" style="padding:10px 0 5px 0"> 
 
               <label>Seleccione un departamento</label>
-              <select   ng-model="dpto" class="col-md-12" ng-disabled="!dptos"  ng-options="dpto.nombre for dpto in dptos"  >
+              <select   ng-model="dpto" name="dpto" class="col-md-12" ng-disabled="!dptos"  ng-options="dpto.nombre for dpto in dptos"  >
                     
                 <option value="{{dpto.id_departamento}}" ng-repeat="dpto in dptos">{{dpto.nombre}}</option>
               </select>
 
               <label>Seleccione una Ciudad</label>
-              <select ng-model="mcpio" class="col-md-12" ng-disabled="!mcpios" ng-controller="geoCtrl" ng-options="mcpioo.nombre for mcpioo in mcpios">
+              <select ng-model="mcpio" name="mcpio" class="col-md-12" ng-disabled="!mcpios" ng-controller="geoCtrl" ng-options="mcpioo.nombre for mcpioo in mcpios">
   
                 <option value="{{mcpioo.id}}" ng-repeat="mcpioo in mcpios">{{mcpioo.nombre}}</option>
               </select>
@@ -46,7 +46,7 @@
 </div>
                 
                 <label>Seleccione una sala</label>
-              <select ng-model="sala" class="col-md-12"  ng-controller="salasCtrl" >  
+              <select ng-model="sala" name="sala" class="col-md-12"  ng-controller="salasCtrl" >  
                 <option value="{{sala.id}}" ng-repeat="sala in salas">{{sala.nombre}}</option>
               </select>
 

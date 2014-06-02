@@ -1,25 +1,16 @@
 var registro = function(app){
 		
-	app.controller("registroCtrl",function($scope, $rootScope, $http){	
+	app.controller("registroCtrl",function($scope, $http){	
 	 
-	     $scope.sexos = [{"id":"1", "nombre":"Hombre"},{"id":"2", "nombre":"Mujer"}];
+	     $scope.sexos = [{"id":1, "nombre":"Hombre"},{"id":2, "nombre":"Mujer"}];
 
 
 
 
-       $scope.registro = function(){
+       $scope.registro = function($scope){
 
-             var data = {};
+             var data = $("form.form-signin").serializeObject();
 
-             data["sexo"] = $scope.sexo.id;
-             data["mcpio"] = $rootScope.mcpio.id_municipio;
-             data["apellidos"] = $scope.apellidos;
-             data["dpto"] = $rootScope.dpto.id_departamento;   
-             data["cedula"] = $scope.cedula;                  
-             data["nombres"] = $scope.nombres;
-             data["telefono"] = $scope.telefono;
-             data["direccion"] = $scope.direccion;
-             data["sala"] = $rootScope.sala;
              data["registro"] = "";
 
 
