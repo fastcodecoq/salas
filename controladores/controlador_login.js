@@ -17,7 +17,7 @@ var login = function(app){
           data["cliente"] = navigator.userAgent + navigator.vendor + navigator.platform + navigator.language;
      
 
-           jQuery.ajax({
+           $.ajax({
              url : "aplicacion/controladores/controlador_login.php", 
              data : data,
              type : "POST",
