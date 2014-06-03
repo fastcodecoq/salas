@@ -1,5 +1,5 @@
 
-      $.fn.serializeObject = function()
+$.fn.serializeObject = function()
 {
     var o = {};
     var a = this.serializeArray();

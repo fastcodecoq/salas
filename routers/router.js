@@ -40,8 +40,7 @@ var router = function(app){
 
 	 	  $router
 	 	  .when("/registro", { templateUrl : "vistas/registro.html" })	 	  
-	 	  .when("/sala", { templateUrl : "vistas/sala.html", resolve : {auth : auth}})	 	  
-	 	  .when("/auth", { templateUrl : "vistas/auth.html", resolve : {auth : auth}})	 	  
+	 	  .when("/sala", { templateUrl : "vistas/sala.html", resolve : {auth : auth}})	 	  	 	  
 	 	  .when("/reportes", { templateUrl : "vistas/reportes.html", resolve : {auth : auth}})	 	  
 	 	  .when("/", { templateUrl : "vistas/login.html" , controller : "loginCtrl", resolve :  { noLogued : noLogued}});	 	  
 

@@ -26,16 +26,12 @@ var registro = function(app){
                      
                       console.log(rs);
 
-                      if(rs.estado > 0)
-                        {
-                          alert("Usuario registrado exitosamente.");
-                          window.location = "#/";
-                          window.location = "#/";
-                        }
+                      if(rs.estado > 0)                      
+                          alert("Usuario registrado exitosamente.");                        
                       else if(rs.estado < 0)
-                        alert("El usuario ya existe");
+                          alert("El usuario ya se encuentra registrado.");
                       else if(rs.estado === 0)
-                        alert("error con la base de datos")
+                          alert("error con la base de datos")
                       else{
                           var errores = "";
 
