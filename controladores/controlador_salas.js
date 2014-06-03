@@ -12,15 +12,6 @@ var salas = function(app){
 	     });
 
 
-       $scope.$watch("sala", function(nuevo){
-
-          if(!nuevo) return;
-
-          console.log($scope.sala);
-
-
-       });
-
     });
 
 
