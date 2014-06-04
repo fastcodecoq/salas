@@ -26,7 +26,7 @@ class controlador_login{
 			 if(!isset($_POST["cedula"]) || empty($_POST["cedula"]))
 			  $errores[] = "Ingrese su cedula";
 
-			 if(!isset($_POST["id_sala"]) || empty($_POST["id_sala"]))
+			 if(!isset($_POST["sala"]) || empty($_POST["sala"]))
 			  $errores[] = "Seleccione una sala";
 
 			if(count($errores) > 0)
@@ -36,7 +36,7 @@ class controlador_login{
 			}
 
 			$cedula = addslashes(htmlspecialchars(strip_tags($_POST["cedula"])));
-			$id_sala = addslashes(htmlspecialchars(strip_tags($_POST["id_sala"])));
+			$id_sala = addslashes(htmlspecialchars(strip_tags($_POST["sala"])));
 
 			$cliente = htmlspecialchars(strip_tags($_POST["cliente"]));
 

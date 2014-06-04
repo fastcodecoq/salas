@@ -11,9 +11,8 @@ var login = function(app){
 
        $scope.login = function(){
 
-          data = {};
-          data["cedula"] = $scope.cedula;
-          data["id_sala"] = $rootScope.sala; 
+          var data = $("form.form-signin").serializeObject();     
+     
           data["cliente"] = navigator.userAgent + navigator.vendor + navigator.platform + navigator.language;
      
 

@@ -9,8 +9,8 @@
         <h3 class="form-signin-heading text-center">Ingresar.</h3>
         <small style="display:block" class="text-center"><a href="#/registro" style="font-size:13px">Registrate aquí</a> si aun no eres miembro.</small>
         <br>
-        <input  class="form-control" ng-model="cedula" placeholder="Cedula" required="" autofocus="">
-        <select class="form-control" ng-model="sala" placeholder="Sala" required="" ng-controller="salasCtrl" >
+        <input  class="form-control" ng-model="cedula" name="cedula" placeholder="Cedula" required="" autofocus="">
+        <select class="form-control" name="sala" ng-model="sala" placeholder="Sala" required="" ng-controller="salasCtrl" >
             <option value="{{sala.id}}" ng-repeat="sala in salas">{{sala.nombre}}</option>
         </select>
        <br>

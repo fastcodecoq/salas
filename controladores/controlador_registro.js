@@ -27,7 +27,10 @@ var registro = function(app){
                       console.log(rs);
 
                       if(rs.estado > 0)                      
+                         { 
                           alert("Usuario registrado exitosamente.");                        
+                          window.location = "#/";
+                          }
                       else if(rs.estado < 0)
                           alert("El usuario ya se encuentra registrado.");
                       else if(rs.estado === 0)
