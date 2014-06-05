@@ -21,8 +21,9 @@ var registro = function(app){
                 url: "aplicacion/controladores/controlador_registro.php", 
                 data : data,
                 type : "POST",
-                dataType : "JSON",
-                success : function(rs){
+                dataType : "JSON"
+                })
+             .done(function(rs){
                      
                       console.log(rs);
 
@@ -44,13 +45,9 @@ var registro = function(app){
                           alert("Tenemos los siguientes errores: \n" + errores);                    
                         }
 
-             },
-             error : function(error){
-                
-                console.log(error);
+              })
+             .fail(function(err){ /*console.log(err);solo descomentar para modo desarrollo */ });
 
-             }
-           });
            
 
        }

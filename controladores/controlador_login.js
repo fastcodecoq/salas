@@ -31,7 +31,7 @@ var login = function(app){
                     else
                       alert("El usuario ingresado no es correcto, o no hace parte de la sala seleccionada.");
              })
-           .fail(function(err){ //console.log(err); //solo descomentar para modo desarrollo })
+           .fail(function(err){ /*console.log(err);solo descomentar para modo desarrollo */ });
 
            return false;
 
