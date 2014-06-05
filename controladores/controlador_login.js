@@ -27,7 +27,7 @@ var login = function(app){
               console.log(rs);
 
                  if(rs.estado === 1)                
-                     window.location = "sala";
+                     window.location = "#/sala";
                     else
                       alert("El usuario ingresado no es correcto, o no hace parte de la sala seleccionada.");
              })

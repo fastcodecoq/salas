@@ -10,7 +10,7 @@ var router = function(app){
                       .success(function(rs){
                       	   if(rs.estado != 1)
                       	   	{
-                      	   		window.location = "salas/";
+                      	   		window.location = "#/salas/";
                       	   		return false;
                       	   	}
 
@@ -28,7 +28,7 @@ var router = function(app){
                       .success(function(rs){
                       	   if(rs.estado != 0)
                       	   	{
-                      	   		window.location = "sala/";
+                      	   		window.location = "#/";
                       	   		return false;
                       	   	}
 
@@ -46,7 +46,7 @@ var router = function(app){
 	 	  .when("/reportes", { templateUrl : "vistas/reportes.html", resolve : {auth : auth}})	 	  
 	 	  .when("/", { templateUrl : "vistas/login.html" , controller : "loginCtrl", resolve :  { noLogued : noLogued}});	 	  
 
-      $locationProvider.html5Mode(true);   
+     // $locationProvider.html5Mode(true);   
 
 	 });
 
