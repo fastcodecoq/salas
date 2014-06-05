@@ -5,7 +5,7 @@ var login = function(app){
 
 
 		
-	app.controller("loginCtrl",function($scope, $rootScope ){	
+	app.controller("loginCtrl",function($scope){	
 
 
 
@@ -20,8 +20,9 @@ var login = function(app){
              url : "aplicacion/controladores/controlador_login.php", 
              data : data,
              type : "POST",
-             dataType : "JSON",
-             success : function(rs){
+             dataType : "JSON",                          
+           })
+           .done(function(rs){
               
               console.log(rs);
 
@@ -29,11 +30,8 @@ var login = function(app){
                      window.location = "#/sala";
                     else
                       alert("El usuario ingresado no es correcto, o no hace parte de la sala seleccionada.");
-             },
-             error : function(error){
-               console.log(error);
-             }
-           });
+             })
+           .fail(function(err){ //console.log(err); //solo descomentar para modo desarrollo })
 
            return false;
 

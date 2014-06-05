@@ -20,14 +20,6 @@ var geo = function(app){
         }, true);
 
 
-        $scope.$watch('mcpio', function (nuevoValor, viejoValor) {
-
-           if(!nuevoValor) return;
-
-
-
-            });
-
 
 	     geoFactory.get().success( function(rs){
 
