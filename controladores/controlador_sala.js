@@ -36,7 +36,7 @@ var sala = function(app){
 
 
                  if(rs.estado === 1)
-                   window.location = "#/";
+                   window.location = "/salas";
 
 
             });
